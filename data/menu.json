@@ -1,0 +1,332 @@
+[
+  {
+    "id": "Pi-1-2824",
+    "name": "Margherita",
+    "category": "Pizza",
+    "price": 2.89,
+    "description": "Tasty margherita pizza made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Pi-1-2824/600/400",
+    "veg": true,
+    "vegan": true,
+    "tags": [
+      "popular"
+    ],
+    "inStock": true,
+    "popularity": 29
+  },
+  {
+    "id": "Pi-2-3286",
+    "name": "Pepperoni",
+    "category": "Pizza",
+    "price": 13.92,
+    "description": "Tasty pepperoni pizza made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Pi-2-3286/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [
+      "popular"
+    ],
+    "inStock": true,
+    "popularity": 70
+  },
+  {
+    "id": "Pi-3-2424",
+    "name": "Veggie Delight",
+    "category": "Pizza",
+    "price": 11.65,
+    "description": "Tasty veggie delight pizza made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Pi-3-2424/600/400",
+    "veg": true,
+    "vegan": true,
+    "tags": [],
+    "inStock": false,
+    "popularity": 12
+  },
+  {
+    "id": "Pi-4-4582",
+    "name": "BBQ Chicken",
+    "category": "Pizza",
+    "price": 6.11,
+    "description": "Tasty bbq chicken pizza made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Pi-4-4582/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [],
+    "inStock": true,
+    "popularity": 72
+  },
+  {
+    "id": "Pi-5-4257",
+    "name": "Four Cheese",
+    "category": "Pizza",
+    "price": 13.6,
+    "description": "Tasty four cheese pizza made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Pi-5-4257/600/400",
+    "veg": true,
+    "vegan": false,
+    "tags": [],
+    "inStock": true,
+    "popularity": 54
+  },
+  {
+    "id": "Bu-1-4611",
+    "name": "Classic Beef",
+    "category": "Burgers",
+    "price": 9.46,
+    "description": "Tasty classic beef burger made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Bu-1-4611/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [
+      "popular"
+    ],
+    "inStock": true,
+    "popularity": 1
+  },
+  {
+    "id": "Bu-2-3615",
+    "name": "Cheddar Bacon",
+    "category": "Burgers",
+    "price": 13.32,
+    "description": "Tasty cheddar bacon burger made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Bu-2-3615/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [
+      "popular"
+    ],
+    "inStock": true,
+    "popularity": 20
+  },
+  {
+    "id": "Bu-3-4527",
+    "name": "Mushroom Swiss",
+    "category": "Burgers",
+    "price": 17.34,
+    "description": "Tasty mushroom swiss burger made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Bu-3-4527/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [],
+    "inStock": true,
+    "popularity": 12
+  },
+  {
+    "id": "Bu-4-7224",
+    "name": "Falafel Veg",
+    "category": "Burgers",
+    "price": 4.0,
+    "description": "Tasty falafel veg burger made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Bu-4-7224/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [],
+    "inStock": true,
+    "popularity": 78
+  },
+  {
+    "id": "Bu-5-5333",
+    "name": "Spicy Chicken",
+    "category": "Burgers",
+    "price": 15.01,
+    "description": "Tasty spicy chicken burger made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Bu-5-5333/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [],
+    "inStock": true,
+    "popularity": 69
+  },
+  {
+    "id": "Bo-1-3045",
+    "name": "Teriyaki Chicken",
+    "category": "Bowls",
+    "price": 17.58,
+    "description": "Tasty teriyaki chicken bowl made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Bo-1-3045/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [
+      "popular"
+    ],
+    "inStock": true,
+    "popularity": 71
+  },
+  {
+    "id": "Bo-3-4150",
+    "name": "Beef Bulgogi",
+    "category": "Bowls",
+    "price": 13.42,
+    "description": "Tasty beef bulgogi bowl made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Bo-3-4150/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [],
+    "inStock": false,
+    "popularity": 30
+  },
+  {
+    "id": "Bo-4-5741",
+    "name": "Mediterranean",
+    "category": "Bowls",
+    "price": 17.77,
+    "description": "Tasty mediterranean bowl made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Bo-4-5741/600/400",
+    "veg": true,
+    "vegan": true,
+    "tags": [],
+    "inStock": true,
+    "popularity": 13
+  },
+  {
+    "id": "Bo-5-7227",
+    "name": "Veggie Rainbow",
+    "category": "Bowls",
+    "price": 6.81,
+    "description": "Tasty veggie rainbow bowl made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Bo-5-7227/600/400",
+    "veg": true,
+    "vegan": true,
+    "tags": [],
+    "inStock": true,
+    "popularity": 47
+  },
+  {
+    "id": "Dr-1-3664",
+    "name": "Lemonade",
+    "category": "Drinks",
+    "price": 8.24,
+    "description": "Tasty lemonade drink made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Dr-1-3664/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [
+      "popular"
+    ],
+    "inStock": true,
+    "popularity": 35
+  },
+  {
+    "id": "Dr-2-2169",
+    "name": "Iced Tea",
+    "category": "Drinks",
+    "price": 11.94,
+    "description": "Tasty iced tea drink made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Dr-2-2169/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [
+      "popular"
+    ],
+    "inStock": true,
+    "popularity": 94
+  },
+  {
+    "id": "Dr-3-5010",
+    "name": "Cold Brew",
+    "category": "Drinks",
+    "price": 5.03,
+    "description": "Tasty cold brew drink made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Dr-3-5010/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [],
+    "inStock": true,
+    "popularity": 82
+  },
+  {
+    "id": "Dr-4-4598",
+    "name": "Mango Lassi",
+    "category": "Drinks",
+    "price": 13.11,
+    "description": "Tasty mango lassi drink made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Dr-4-4598/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [],
+    "inStock": true,
+    "popularity": 100
+  },
+  {
+    "id": "Dr-5-1916",
+    "name": "Sparkling Water",
+    "category": "Drinks",
+    "price": 6.05,
+    "description": "Tasty sparkling water drink made with quality ingredients.",
+    "image": "https://picsum.photos/seed/Dr-5-1916/600/400",
+    "veg": false,
+    "vegan": false,
+    "tags": [],
+    "inStock": false,
+    "popularity": 41
+  },
+  {
+    "id": "De-1-7572",
+    "name": "Chocolate Cake",
+    "category": "Desserts",
+    "price": 6.65,
+    "description": "Tasty chocolate cake dessert made with quality ingredients.",
+    "image": "https://picsum.photos/seed/De-1-7572/600/400",
+    "veg": true,
+    "vegan": false,
+    "tags": [
+      "popular"
+    ],
+    "inStock": true,
+    "popularity": 73
+  },
+  {
+    "id": "De-2-6155",
+    "name": "Cheesecake",
+    "category": "Desserts",
+    "price": 5.8,
+    "description": "Tasty cheesecake dessert made with quality ingredients.",
+    "image": "https://picsum.photos/seed/De-2-6155/600/400",
+    "veg": true,
+    "vegan": false,
+    "tags": [
+      "popular"
+    ],
+    "inStock": true,
+    "popularity": 83
+  },
+  {
+    "id": "De-3-8517",
+    "name": "Brownie",
+    "category": "Desserts",
+    "price": 4.71,
+    "description": "Tasty brownie dessert made with quality ingredients.",
+    "image": "https://picsum.photos/seed/De-3-8517/600/400",
+    "veg": true,
+    "vegan": false,
+    "tags": [],
+    "inStock": false,
+    "popularity": 96
+  },
+  {
+    "id": "De-4-9830",
+    "name": "Tiramisu",
+    "category": "Desserts",
+    "price": 6.57,
+    "description": "Tasty tiramisu dessert made with quality ingredients.",
+    "image": "https://picsum.photos/seed/De-4-9830/600/400",
+    "veg": true,
+    "vegan": false,
+    "tags": [],
+    "inStock": true,
+    "popularity": 75
+  },
+  {
+    "id": "De-5-7543",
+    "name": "Fruit Parfait",
+    "category": "Desserts",
+    "price": 8.11,
+    "description": "Tasty fruit parfait dessert made with quality ingredients.",
+    "image": "https://picsum.photos/seed/De-5-7543/600/400",
+    "veg": true,
+    "vegan": false,
+    "tags": [],
+    "inStock": true,
+    "popularity": 18
+  }
+]

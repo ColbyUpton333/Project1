@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YumYard — Online Food Ordering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#" data-nav="home">YumYard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#" data-nav="home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#checkout" data-nav="checkout">Checkout</a></li>
+            <li class="nav-item"><a class="nav-link" href="#profile" data-nav="profile">Profile</a></li>
+          </ul>
+          <form class="d-flex gap-2 my-2 my-lg-0" role="search" id="menu-search-form">
+            <input class="form-control" type="search" placeholder="Search dishes..." aria-label="Search" id="menu-search-input">
+            <select class="form-select" id="menu-sort">
+              <option value="popularity">Sort: Popularity</option>
+              <option value="price-asc">Sort: Price ↑</option>
+              <option value="price-desc">Sort: Price ↓</option>
+            </select>
+            <div class="dropdown">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Filter
+              </button>
+              <ul class="dropdown-menu p-2">
+                <li class="form-check"><input class="form-check-input category-filter" type="checkbox" value="Pizza" id="catPizza" checked><label class="form-check-label" for="catPizza">Pizza</label></li>
+                <li class="form-check"><input class="form-check-input category-filter" type="checkbox" value="Burgers" id="catBurgers" checked><label class="form-check-label" for="catBurgers">Burgers</label></li>
+                <li class="form-check"><input class="form-check-input category-filter" type="checkbox" value="Bowls" id="catBowls" checked><label class="form-check-label" for="catBowls">Bowls</label></li>
+                <li class="form-check"><input class="form-check-input category-filter" type="checkbox" value="Drinks" id="catDrinks" checked><label class="form-check-label" for="catDrinks">Drinks</label></li>
+                <li class="form-check"><input class="form-check-input category-filter" type="checkbox" value="Desserts" id="catDesserts" checked><label class="form-check-label" for="catDesserts">Desserts</label></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="form-check"><input class="form-check-input" type="checkbox" value="veg" id="onlyVeg"><label class="form-check-label" for="onlyVeg">Vegetarian only</label></li>
+                <li class="form-check"><input class="form-check-input" type="checkbox" value="vegan" id="onlyVegan"><label class="form-check-label" for="onlyVegan">Vegan only</label></li>
+              </ul>
+            </div>
+            <button class="btn btn-primary position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" aria-controls="cartDrawer" id="open-cart-btn">
+              Cart
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">0</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home / Menu Section -->
+    <section id="home-section" class="py-4">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h1 class="h3 m-0">Today’s Menu</h1>
+          <div id="active-filters" class="small text-muted"></div>
+        </div>
+        <div id="menu-grid" class="row g-3">
+          <!-- Menu cards render here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section id="checkout-section" class="py-4 d-none">
+      <div class="container">
+        <h2 class="h4 mb-3">Checkout</h2>
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <form id="checkout-form" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Name</label>
+                  <input type="text" class="form-control" id="co-name" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" id="co-email" required>
+                  <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Phone</label>
+                  <input type="tel" class="form-control" id="co-phone" pattern="^[0-9\-\+\s\(\)]{7,}$" required>
+                  <div class="invalid-feedback">Please enter a valid phone.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Address</label>
+                  <textarea class="form-control" id="co-address" rows="3" minlength="8" required></textarea>
+                  <div class="invalid-feedback">Please provide a full address.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Payment</label>
+                  <input class="form-control" placeholder="Card placeholder (demo)">
+                </div>
+              </div>
+              <div class="d-flex justify-content-end gap-2 mt-3">
+                <button class="btn btn-outline-secondary" type="button" data-nav="home">Back to Menu</button>
+                <button class="btn btn-success" id="place-order-btn" type="submit" disabled>Place Order</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-5">
+            <div class="card">
+              <div class="card-header">Order Summary</div>
+              <div class="card-body" id="checkout-summary">
+                <!-- Summary renders here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile-section" class="py-4 d-none">
+      <div class="container">
+        <h2 class="h4 mb-3">Profile</h2>
+        <form id="profile-form">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" id="pf-name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" id="pf-email" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Default Address</label>
+              <textarea class="form-control" id="pf-address" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end gap-2 mt-3">
+            <button class="btn btn-outline-secondary" type="button" data-nav="home">Back</button>
+            <button class="btn btn-primary" type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Item Details Modal -->
+    <div class="modal fade" id="itemModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="itemModalLabel">Item</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="item-modal-body">
+            <!-- Item details render here -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="modal-add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
+      <div class="offcanvas-header">
+        <h5 id="cartDrawerLabel">Your Cart</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <div id="cart-items" class="flex-grow-1"></div>
+        <div id="cart-summary" class="mt-3"></div>
+        <div class="d-grid gap-2 mt-3">
+          <button class="btn btn-outline-danger" id="cart-clear">Clear Cart</button>
+          <button class="btn btn-success" id="cart-checkout">Go to Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toasts -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+      <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <footer class="border-top mt-5 py-4">
+      <div class="container small text-muted d-flex justify-content-between">
+        <span>© <span id="year"></span> YumYard</span>
+        <span>Built with ❤️ Bootstrap</span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./assets/js/app.js"></script>
+  </body>
+</html>
